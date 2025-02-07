@@ -37,10 +37,10 @@ text_splitter = RecursiveCharacterTextSplitter(
 # 存储所有切片的列表
 all_chunks = []
 
-# 遍历 ./news 目录下的所有文件
-for filename in os.listdir('./news'):
+# 遍历 news 目录下的所有文件
+for filename in os.listdir('../news'):
     if filename.endswith('.md'):
-        file_path = os.path.join('./news', filename) 
+        file_path = os.path.join('../news', filename) 
 
         with open(file_path, "r", encoding="utf-8") as file:
             markdown_content = file.read()
